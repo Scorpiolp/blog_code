@@ -14,7 +14,9 @@ class Show extends CI_Controller {
 //		$list = $res->result();
 		$list = $this->Blog_model->search($id);
 		$data['list']=$list;
+		$this->load->view('header');
 		$this->load->view('show_detail',$data);
+		$this->load->view('footer');
 		//$this->load->vars($id);
 		//$this->load->view('show_detail',$id);
 	}

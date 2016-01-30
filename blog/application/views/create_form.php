@@ -64,27 +64,34 @@
 	</style>
 </head>
 <body>
-
-<div id="container">
-	<h1>Welcome to ZKC Blog!</h1>
-</div>
-	<table>
-		<form action="publish" method="post">
-		Passage Name <input type="text" name="PassageName" value="<?php echo set_value('PassageName')?>"/>
-		<?php echo form_error('PassageName','<span>','</span>'); ?>
-		<br>
-		Author Name <input type="text" name="AuthorName" value="<?php echo set_value('AuthorName')?>"/>
-		<?php echo form_error('AuthorName','<span>','</span>'); ?>
-		<br>
-		Text <textarea name="Text" id="" cols="80" rows="20"><?php echo set_value('Text')?></textarea>
-		<?php echo form_error('Text','<span>','</span>'); ?>
-		<br>
+<br />
+<div>
+	<table class="am-table am-table-bordered am-table-striped am-table-hover">
+		<form action="publish" method="post" class="am-form">
 		<tr>
-		<td><input type="submit" name="submit" value="submit"/></td>
-		<td><input type="reset" name="reset" value="reset"/></td>
+		<td>Passage Name</td>
+		<td> <input type="text" name="PassageName" class="am-form-field am-radius" placeholder="Passage name" value="<?php echo set_value('PassageName')?>"/>
+		<?php echo form_error('PassageName','<span>','</span>'); ?>
+		</td>
 		</tr>
-		
+		<tr>
+		<td>Author Name</td>
+		<td> <input type="text" name="AuthorName" class="am-form-field am-radius" placeholder="Author Name" value="<?php echo set_value('AuthorName')?>"/>
+		<?php echo form_error('AuthorName','<span>','</span>'); ?>
+		</td>
+		</tr>
+		<tr>
+		<td>Text</td>
+		<td> <textarea name="Text" id="" cols="80" class="am-form-field am-radius" placeholder="Text" rows="20"><?php echo set_value('Text')?></textarea>
+		<?php echo form_error('Text','<span>','</span>'); ?>
+		</td>
+		</tr>
+		<tr>
+		<td><input type="submit" class="am-btn am-btn-primary am-round" name="submit" value="submit"/></td>
+		<td><input type="reset" class="am-btn am-btn-danger am-round" name="reset" value="reset"/></td>
+		</tr>		
 		</form>
 	</table>
+	</div>
 </body>
 </html>

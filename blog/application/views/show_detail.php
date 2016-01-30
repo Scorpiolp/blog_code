@@ -64,31 +64,33 @@
 	</style>
 </head>
 <body>
-	<table>
+<br />
+<div>
+	<table class="am-table am-table-bordered am-table-striped am-table-hover">
 		<?php foreach($list as $item): ?>
 		<tr>
-			<td>Passage Name:</td>
-			<td><?=$item->Articlename?></td>
+			<td class="am-active">Passage Name:</td>
+			<td class="am-primary"><?=$item->Articlename?></td>
 		</tr>
 		<tr>
-			<td>Author Name:</td>
-			<td><?=$item->Authorname?></td>
+			<td class="am-active">Author Name:</td>
+			<td class="am-primary"><?=$item->Authorname?></td>
 		</tr>
 		<tr>
-			<td>Date:</td>
-			<td><?=$item->Date?></td>
+			<td class="am-active">Date:</td>
+			<td class="am-primary"><?=$item->Date?></td>
 		</tr>
 		<tr>
-			<td>Text:</td>
-			<td><?=$item->Text?></td>
+			<td class="am-active">Text:</td>
+			<td class="am-primary"><?=$item->Text?></td>
 		</tr>
 		<tr>
-		<td><a href="Blog">Return</a></td>
-		<td><a href="Edit/modify<?php echo "?id=".$item->id?>">Edit</a></td>
-		<td><a href="Edit/deletearticle<?php echo "?id=".$item->id?>">Delete</a></td>
+		<td><input type="button" class="am-btn am-btn-primary am-round" name="return" value="Return" onclick="location='Blog'"/></td>
+		<td><input type="button" class="am-btn am-btn-danger am-round" name="modify" value="Edit" onclick="location='Edit/modify<?php echo "?id=".$item->id?>'"/></td>
+		<td><input type="button" class="am-btn am-btn-default am-round" name="delete" value="Delete" onclick="location='Edit/deletearticle<?php echo "?id=".$item->id?>'"/></td>
 		</tr>
 		<?php endforeach;?>
 	</table>
-	
+</div>	
 </body>
 </html>

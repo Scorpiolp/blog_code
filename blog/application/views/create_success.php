@@ -64,11 +64,10 @@
 	</style>
 </head>
 <body>
-
-<div id="container">
-	<h1>Welcome to ZKC Blog!</h1>
-</div>
+<br />
 <p>Create Successfully</p>
-<a href="../Blog">Return</a>
+<div>
+<input type="button" class="am-btn am-btn-primary am-round" name="return" value="Return" onclick="location='../Blog'"/>
+</div>
 </body>
 </html>

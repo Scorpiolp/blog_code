@@ -64,25 +64,33 @@
 	</style>
 </head>
 <body>
-
-<div id="container">
-	<h1>Welcome to ZKC Blog!</h1>
-</div>
-	<table>
+<br />
+<div>
+	<table class="am-table am-table-bordered am-table-striped am-table-hover">
 		<?php foreach($list as $item): ?>
-		<form action="save<?php echo "?id=".$item->id?>" method="post">
-		Passage Name <input type="text" name="PassageName" value="<?=$item->Articlename?>"/>
-		<br>
-		Author Name <input type="text" name="AuthorName" value="<?=$item->Authorname?>"/>
-		<br>
-		Text <textarea name="Text" id="" cols="80" rows="20"><?=$item->Text?></textarea>
-		<br>
+		<form action="save<?php echo "?id=".$item->id?>" method="post" >
 		<tr>
-		<td><input type="submit" name="submit" value="submit"/></td>
-		<td><input type="reset" name="reset" value="reset"/></td>
+		<td>Passage Name</td>
+		<td> <input type="text" class="am-form-field am-radius" name="PassageName" value="<?=$item->Articlename?>"/>
+		</td>
 		</tr>
+		<tr>
+		<td>Author Name</td>
+		<td> <input type="text" class="am-form-field am-radius" name="AuthorName" value="<?=$item->Authorname?>"/>
+		</td>
+		</tr>
+		<tr>
+		<td>Text</td>
+		<td> <textarea name="Text" class="am-form-field am-radius" id="" cols="80" rows="20"><?=$item->Text?></textarea>
+		</td>
+		</tr>
+		<tr>
+		<td><input type="submit" class="am-btn am-btn-primary am-round" name="submit" value="submit"/></td>
+		<td><input type="reset" class="am-btn am-btn-danger am-round" name="reset" value="reset"/></td>
+		</tr>		
 		</form>
 		<?php endforeach;?>
 	</table>
+</div>
 </body>
 </html>

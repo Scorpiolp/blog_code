@@ -13,7 +13,7 @@ class Blog extends CI_Controller {
 		}
 		*/
 		$this->load->database();
-		
+		$this->load->helper('url');
 		$this->load->model('Blog_model');
 		//$vool=$this->Blog_model->insert($data);
 		//echo $vool;
@@ -25,8 +25,9 @@ class Blog extends CI_Controller {
 		
 		$data['list']=$list;
 		$this->load->vars($data);
+		$this->load->view('header');
 		$this->load->view('show_blog');
-		
+		$this->load->view('footer');
 	}
 }
 ?>

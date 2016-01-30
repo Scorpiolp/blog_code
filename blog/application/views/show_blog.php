@@ -64,23 +64,18 @@
 	</style>
 </head>
 <body>
-
-<div id="container">
-	<h1>Welcome to ZKC Blog!</h1>
-</div>
-	<a href="Edit/create">Publish Article</a>
 	<br>
-	<table>
+	<table class="am-table am-table-bordered am-table-striped am-table-hover">
 		<tr>
 			<td>Passage Name</td>
-			<td>Author Name</td>
-			<td>Date</td>
+			<td class="am-primary">Author Name</td>
+			<td class="am-success">Date</td>
 		</tr>
 		<?php foreach($list as $item): ?>
 		<tr>
 			<td><a href="Show<?php echo "?id=".$item->id?>"><?=$item->Articlename?></a></td>
-			<td><?=$item->Authorname?></td>
-			<td><?=$item->Date?></td>
+			<td class="am-primary"><?=$item->Authorname?></td>
+			<td class="am-success"><?=$item->Date?></td>
 		</tr>
 		<?php endforeach;?>
 	</table>
